@@ -1,0 +1,27 @@
+<h2><%= @goal.title %> </h2>
+
+<p>
+  <%= @goal.body %>
+</p>
+
+<table>
+  <tr>
+    <th>
+      Complete
+    </th>
+    <th>
+      Private
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <%= @goal.completed ? "True" : "False" %>
+    </td>
+    <td>
+      <%= @goal.private ? "True" : "False" %>
+    </td>
+  </tr>
+</table>
+
+<%= link_to "All Goals", goals_url %>,
+<%= link_to "Edit Goal", edit_goal_url(@goal) %>
